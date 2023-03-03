@@ -1,3 +1,5 @@
+@import url(./burger/style.css);
+
 * {
     font-family: Tahoma;
 }
@@ -32,7 +34,7 @@ header p {
 }
 
 a {
-    color: gray;
+    color: deepskyblue;
     text-decoration: none;
     margin: 0px 8px;
 }
@@ -44,4 +46,8 @@ a:hover {
 .logo {
     height: 50px;
     width: 50px;
+}
+
+@media screen and (max-width: 650px) {
+    
 }
