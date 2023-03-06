@@ -50,20 +50,16 @@
                 button.classList.remove('active')
                 mobileMenu.classList.remove('active')
                 button.classList.add('buffer')
-                mobileMenu.classList.add('buffer')
                 setTimeout(() => {
                     button.classList.add('inactive')
-                    mobileMenu.classList.add('inactive')
                     button.classList.remove('buffer')
-                    mobileMenu.classList.remove('buffer')
                 }, 1)
             }
             else {
                 button.classList.remove('inactive')
-                mobileMenu.classList.remove('inactive')
+                mobileMenu.classList.add('active')
                 setTimeout(() => {
                     button.classList.add('active')
-                    mobileMenu.classList.add('active')
                 }, 1)
             }
         })

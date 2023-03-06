@@ -9,6 +9,7 @@ body {
     padding: 0;
     min-height: 100vh;
     background-color: #ededed;
+    overflow-x: hidden;
 }
 
 body * {
@@ -52,7 +53,7 @@ a:hover {
 .mobile-menu {
     background-color: white;
     min-height: calc(100vh - 80px);
-    display: none;
+    display: flex;
 }
 
 .burger-menu {
@@ -60,16 +61,17 @@ a:hover {
 }
 
 @media screen and (max-width: 650px) {
-    .mobile-menu.inactive {
-        background-color: white;
-        min-height: calc(100vh - 80px);
-        display: none;
+    .mobile-menu {
+        transform: translateX(30%);
+        transition: transform .3s ease;
+        will-change: transform;
     }
 
     .mobile-menu.active {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
+        transform: translateX(0%);
     }
 
     .burger-menu {
