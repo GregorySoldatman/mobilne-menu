@@ -50,10 +50,9 @@ a:hover {
     width: 50px;
 }
 
-.mobile-menu {
-    background-color: white;
-    min-height: calc(100vh - 80px);
+.menu {
     display: flex;
+    align-items: center;
 }
 
 .burger-menu {
@@ -61,27 +60,31 @@ a:hover {
 }
 
 @media screen and (max-width: 650px) {
-    .mobile-menu {
-        transform: translateX(30%);
-        transition: transform .3s ease;
+    .menu {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+
+        background-color: rgb(255, 255, 255);
+        min-height: calc(100vh - 80px);
+        display: block;
+
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
         will-change: transform;
     }
 
-    .mobile-menu.active {
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
+    .menu.active {
         transform: translateX(0%);
     }
 
     .burger-menu {
         display: inline-block;
-        position: fixed;
-            top: 25px;
-            right: 30px;
-    }
-
-    header a[href="#"] {
-        display: none;
+        /* position: fixed;
+        top: 25px;
+        right: 30px; */
+        align-self: center;
+        margin-left: auto;
     }
 }
