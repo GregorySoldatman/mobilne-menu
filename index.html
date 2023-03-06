@@ -24,24 +24,47 @@
         <a href="#">
             <p>Kontakt</p>
         </a>
+        <button class="burger-menu">
+            <span class="burger-menu__dash"></span>
+        </button>
     </header>
-    <button class="burger-menu">
-        <span class="burger-menu__dash"></span>
-    </button>
+    <div class="mobile-menu">
+        <a href="#">
+            <p>O nas</p>
+        </a>
+        <a href="#">
+            <p>Aktualności</p>
+        </a>
+        <a href="#">
+            <p>Usługi</p>
+        </a>
+        <a href="#">
+            <p>Kontakt</p>
+        </a>
+    </div>
     <script>
         const button = document.querySelector('.burger-menu')
+        const mobileMenu = document.querySelector('.mobile-menu')
         button.addEventListener('click', () => {
             if (button.classList.contains('active')) {
                 button.classList.remove('active')
+                mobileMenu.classList.remove('active')
                 button.classList.add('buffer')
+                mobileMenu.classList.add('buffer')
                 setTimeout(() => {
                     button.classList.add('inactive')
+                    mobileMenu.classList.add('inactive')
                     button.classList.remove('buffer')
+                    mobileMenu.classList.remove('buffer')
                 }, 1)
             }
             else {
                 button.classList.remove('inactive')
-                setTimeout(() => {button.classList.add('active')}, 1)
+                mobileMenu.classList.remove('inactive')
+                setTimeout(() => {
+                    button.classList.add('active')
+                    mobileMenu.classList.add('active')
+                }, 1)
             }
         })
     </script>
